@@ -1,3 +1,12 @@
+-- Note :-  While doing these calculations I have used  some queries, to show  that we can still work with the dataset even if it is not completely cleaned by  changing data types  and the sql security permissions and some other also.
+for converting text to date data type
+STR_TO_DATE(report_date, '%d-%m-%Y' 
+for replacing unwanted symbols in data
+UPDATE insurance_data.insurance_info
+SET CLAIM_AMOUNT = REPLACE(REPLACE(REPLACE(CLAIM_AMOUNT, ' ', ''), '$', ''), ',', '');
+SET SQL_SAFE_UPDATES = 0;
+
+
  -- Details covered in SQL
 -- Finding total no of approved loans 
 
